@@ -72,3 +72,7 @@ for line in fileinput.input(syncthingResourceScript, inplace=True):
 	if line.startswith(linePrefix):
 		line = '{}"{}"\n'.format(linePrefix, str(version))
 	sys.stdout.write(line)
+
+print(f"Found latest tag from github: {tag_name}")
+print(f"CFBundleShortVersionString={CFBundleShortVersionString}")
+print(f"CFBundleVersion={CFBundleVersion}")
